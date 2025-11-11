@@ -1,0 +1,116 @@
+ :root {
+      --bg-color: #f0f0f0;
+      --text-color: #000;
+      --btn-color: #ddd;
+      --btn-hover: #ccc;
+      --operator: #ff9500;
+      --operator-hover: #ffa733;
+      --equal: #28a745;
+      --equal-hover: #34d058;
+      --clear: #dc3545;
+      --clear-hover: #e85a6b;
+      --shadow: rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #000000;
+      font-family: Arial, sans-serif;
+      transition: background 0.3s;
+    }
+
+    .calculadora {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px var(--shadow);
+      width: 320px;
+    }
+
+    .tela {
+      background: #000;
+      color: #0f0;
+      font-size: 2rem;
+      text-align: right;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .botoes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    button {
+      padding: 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background: var(--btn-color);
+      color: var(--text-color);
+      cursor: pointer;
+      transition: transform 0.1s, background 0.3s;
+      box-shadow: 0 3px 5px var(--shadow);
+    }
+
+    button:hover {
+      background: var(--btn-hover);
+      transform: scale(1.05);
+    }
+
+    .operador {
+      background: var(--operator);
+      color: #fff;
+    }
+
+    .operador:hover {
+      background: var(--operator-hover);
+    }
+
+    .igual {
+      background: var(--equal);
+      color: #fff;
+      grid-column: span 2;
+    }
+
+    .igual:hover {
+      background: var(--equal-hover);
+    }
+
+    .limpar {
+      background: var(--clear);
+      color: #fff;
+    }
+
+    .limpar:hover {
+      background: var(--clear-hover);
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    .historico {
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 15px;
+      height: 80px;
+      overflow-y: auto;
+      font-size: 0.9rem;
+      color: #333;
+    }
